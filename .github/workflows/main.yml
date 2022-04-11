@@ -1,8 +1,10 @@
 name: min-ci-workflow
 on: 
   push:
-    tags:
-      - 'build*'
+    branches:
+      - 'main'
+    # tags:
+    #   - 'build*'
 
 jobs:
   build:
@@ -26,4 +28,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: min-ci:latest
+          tags: docker.io/innfi/min-ci:latest
