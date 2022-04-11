@@ -12,5 +12,5 @@ WORKDIR /usr/src/app
 COPY --from=builder /usr/src/app ./
 ENTRYPOINT [ "node", "./dist/src/index.js" ]
 
-ARG PORT
+ARG PORT 3000
 EXPOSE $PORT
