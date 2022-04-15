@@ -30,7 +30,11 @@ jobs:
         run: npm test
 
   call-build-workflow:
+    needs: test
     uses: ./.github/workflows/build.yml
+    with:
+      username: ${{ secrets.DOCKERHUB_USERNAME }}
+      token: ${{ secrets.DOCKERHUB_TOKEN }}
 
 
         
