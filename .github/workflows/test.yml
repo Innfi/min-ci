@@ -29,7 +29,8 @@ jobs:
       - name: test
         run: npm test
 
-      - name: call build workflow
-        uses: ./.github/workflows/build.yml
+  call-build-workflow:
+    uses: ./.github/workflows/build.yml
+
 
         
